@@ -13,12 +13,15 @@ extern osMutexId mutexHandle;
 
 double temperature;
 double pressure;
+char* test = "I'm alive\r\n";
+char arr[10];
 
 //static u32 resData[2];
 void taskBluetooth(void const * argument){
 //	uartInitInfo();
 	for(;;){
 //		xSemaphoreTake(semaphoreHandle, portMAX_DELAY);
+		uInfoBlth.irqFlags.regIrq = 0;
         while(!waitIdle("", &uInfoBlth.irqFlags, 1000, 15000)){
             D(printf("ERROR: NO WIRELESS SENS\r\n"));
         }
@@ -27,7 +30,9 @@ void taskBluetooth(void const * argument){
 //		resData[0] = temp;
 //		resData[1] = pres;
 //		xSemaphoreGive(mutexHandle);
-//		uartTx(resData, sizeof(resData), &uInfoBlth);
+        memset(arr, '\0', sizeof(arr));
+        sprintf(arr, "%s", test);
+		uartTx(arr, strlen(arr), &uInfoBlth);
 	}
 
 }

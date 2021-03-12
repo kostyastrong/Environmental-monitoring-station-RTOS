@@ -263,7 +263,7 @@ void USART1_IRQHandler(void)
   /* USER CODE BEGIN USART1_IRQn 1 */
   if ((__HAL_UART_GET_FLAG(&huart1, UART_FLAG_IDLE) != RESET) &&
 		  (__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_IDLE) != RESET)){
-	  uInfoBlth.irqFlags.isIrqIdle += 1;
+	  uInfoBlth.irqFlags.isIrqIdle = 1;
 //	  printf("INTERRUPT: IDLE\r\n");
 }
 

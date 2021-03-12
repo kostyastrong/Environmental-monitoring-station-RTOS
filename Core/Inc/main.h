@@ -90,7 +90,7 @@ typedef union{
 	struct{
 		u8 isIrqTx:		1;
 		u8 isIrqRx: 	1;
-		u8 isIrqIdle:	3;
+		u8 isIrqIdle:	1;
 	};
 	u8 regIrq;
 }IrqFlags;
