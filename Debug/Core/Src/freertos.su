@@ -1,0 +1,4 @@
+freertos.c:73:6:vApplicationGetIdleTaskMemory	24	static
+freertos.c:87:6:MX_FREERTOS_Init	88	static
+freertos.c:139:13:taskBmp280Monitor	16	static
+freertos.c:157:13:taskBluetooth	16	static

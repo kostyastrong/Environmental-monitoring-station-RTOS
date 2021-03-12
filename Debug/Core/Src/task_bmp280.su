@@ -1,0 +1,2 @@
+task_bmp280.c:26:6:taskBmp280Monitor	32	static
+task_bmp280.c:67:6:configBMP	16	static

@@ -1,0 +1,4 @@
+my_bmp280.c:10:9:SPIx_WriteRead	32	static
+my_bmp280.c:18:9:bmp280Read	16	static
+my_bmp280.c:31:9:bmp280Write	16	static
+my_bmp280.c:43:6:Delay	16	static
